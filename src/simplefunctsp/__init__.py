@@ -6,3 +6,4 @@ print(f"Importing {__name__}")
 print(f"Current Version {__version__}")
 from .add_numbers import *
 from .template_package import *
+from .fun_division import *
