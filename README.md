@@ -1,23 +1,15 @@
-# Building Python Packages
+# Simple Functions for Senior Project (SP) practice `simplefunctsp`
 
-We are following the guide from [Python Packages](https://py-pkgs.org/welcome) by Tomas Beuzen and Tiffany Timbers for the structure of this template repo.  This readme documents differences from their guide and elements that need to be changed in the repo once you use this template for your own named package.
+This practice package repository is for our class to go through the process of;
 
-## Files to change once template is copied
+1. Creating a function
+2. Building documentation for the function
+3. Submitting a pull request
 
-These files/folders need to be edited to use your package name instead of the `pypackage_template` name. The `pyproject.toml` will also need author editing.
-
-- [`tests/test_template_package.py`](https://github.com/byuirpytooling/pypackage_template/blob/main/tests/test_template_package.py)
-- [`src/pypackage_template`](https://github.com/byuirpytooling/pypackage_template/tree/main/src/pypackage_template)
-- [`src/pypackage_template/__init__.py`](https://github.com/byuirpytooling/pypackage_template/blob/main/src/pypackage_template/__init__.py)
-- [`main/pyproject.toml`](https://github.com/byuirpytooling/pypackage_template/blob/main/pyproject.toml)
-- [`mkdocs.yml`](https://github.com/byuirpytooling/pypackage_template/blob/main/mkdocs.yml)
-- [`docs/API.md`](https://github.com/byuirpytooling/pypackage_template/blob/main/docs/API.md)
-
-## Differences from the Python Packages book
 
 ###  Python Installation
 
-We will use [uv](https://docs.astral.sh/uv/guides/install-python/) instead of [conda](https://anaconda.org/anaconda/conda).
+We will use [uv](https://docs.astral.sh/uv/guides/install-python/)
 
 ### Installing uv and python
 
@@ -35,12 +27,6 @@ We will use [uv](https://docs.astral.sh/uv/guides/install-python/) instead of [c
 
 ## Handy `uv` commands 
 
-### Install a package from Github repository
-
-```bash
-uv pip install "git+https://github.com/byuirpytooling/pypackage_template.git@main"
-```
-
 ### Installing the package in development into the Python environment 
 
 The `--editable` allows us to create an installation that points back to your project directory instead of copying the code into site-packages. With this, we can now edit the source files, and the installed package in the environment is automatically updated.
@@ -49,10 +35,30 @@ The `--editable` allows us to create an installation that points back to your pr
 uv sync --editable
 ```
 
-The above option replaces examples where you would run.
+With this run you can now run the following command to evaluate the package within the package specific Python that has the package installed
 
 ```bash
-uv pip install -e .
+uv run python
+```
+
+### Examining the Documentation
+
+Because of the `WATCH:` options in the `mkdocs.yml` we can now make edits to our function details and see the edits in real time with
+
+```bash
+uv run mkdocs serve
+```
+
+After you have the docs as you want you will need to build them to the `docs` folder for Github.
+
+```bash
+uv run mkdocs build
+```
+
+### Install a package from Github repository
+
+```bash
+uv pip install "git+https://github.com/byuirpytooling/simplefunctsp.git@main"
 ```
 
 ## Directory structure

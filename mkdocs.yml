@@ -1,5 +1,5 @@
-site_name: Example MkDocs Material Documentation for pypackage_template
-site_url: https://byuirpytooling.github.io/pypackage_template
+site_name: Example MkDocs Material Documentation for simplefunctsp
+site_url: https://byuirpytooling.github.io/simplfunctsp
 theme:
   name: material
   icon:
@@ -26,6 +26,10 @@ theme:
         name: Light mode
       primary: blue
       accent: deep orange
+
+watch:
+  - src/simplefunctsp
+
 
 markdown_extensions:
   - attr_list

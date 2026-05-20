@@ -3,7 +3,7 @@ requires = ["uv_build >= 0.9.21, <0.10.0"]
 build-backend = "uv_build"
 
 [project]
-name = "pypackage_template"
+name = "simplefunctsp"
 version = "0.0.1"
 description = "A small example package managed with uv"
 readme = "README.md"
@@ -25,12 +25,16 @@ maintainers = [
 dev = [
     "pytest",
     "ruff",
-    { path = ".", develop = true },
 ]
 
 [project.scripts]
 my-uv-cli = "my_uv_package.cli:main"
 
 [tool.uv]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+]
 # Here you can put uv-specific configuration if needed later
 # (you can leave this section out entirely for the simplest case)
